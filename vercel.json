@@ -1,26 +1,17 @@
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)\\.(jpg|jpeg|png|gif|svg|webp|mp4|webm|woff|woff2)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)\\.(html|css|js)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ]
+﻿{
+    "functions":  {
+
+                  },
+    "buildCommand":  "echo \u0027Static site - no build needed\u0027",
+    "env":  {
+
+            },
+    "outputDirectory":  ".",
+    "rewrites":  [
+                     {
+                         "destination":  "/index.html",
+                         "source":  "/(.*)"
+                     }
+                 ],
+    "public":  true
 }
